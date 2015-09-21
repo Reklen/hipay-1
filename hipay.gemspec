@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Hipay::VERSION
   spec.authors       = ["itkin"]
   spec.email         = ["nicolas.papon@gmail.com"]
-  spec.summary       = %q{TODO: Hipay TPP client.}
-  spec.description   = %q{TODO: Hipay TPP client.}
+  spec.summary       = %q{Hipay client.}
+  spec.description   = %q{Hipay client.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
