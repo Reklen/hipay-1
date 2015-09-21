@@ -1,4 +1,4 @@
-Copyright (c) 2014 itkin
+Copyright (c) 2014-2015 itkin
 
 MIT License
 

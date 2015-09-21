@@ -1,6 +1,5 @@
 module Hipay
   class Client
-
     def initialize opts = {}
       @options = opts.with_indifferent_access
       @clients = {}
@@ -19,7 +18,7 @@ module Hipay
     end
 
     def check_response *args, &block
-      user_account.check_response *args, &block
+      user_account.check_response(*args, &block)
     end
 
     private
