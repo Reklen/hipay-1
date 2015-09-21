@@ -23,7 +23,7 @@ module Hipay
 
       def parse_response response, method
         response.body[:"#{method}_response"][:"#{method}_result"].with_indifferent_access
-      rescue Exception => e
+      rescue StandardError => e
         # binding.pry
         raise e
       end
