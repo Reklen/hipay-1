@@ -18,7 +18,7 @@ module Hipay
     end
 
     def transaction namespace = 'transaction-v2'
-      @clients[:withdrawal] ||= SOAP.new resource_options(namespace)
+      @clients[:transaction] ||= SOAP.new resource_options(namespace)
     end
 
     def check_response *args, &block
