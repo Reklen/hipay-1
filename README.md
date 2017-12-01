@@ -82,7 +82,7 @@ tpp_client.post('v1/hpayment', {orderid: "TEST-HPAYMENT-001", operation: "Author
 
 tpp_client.post('v1/order', {orderid: "TEST-ORDER-001", operation: "Authorization", payment_product: "cb", description: "Desc test", amount: "70", accept_url: "http://test.com", decline_url: "http://test.com", pending_url: "http//test.com", exception_url: "http://test.com", cancel_url: "http://test.com", firstname: "Jane", lastname: "Doe", currency: "EUR"})
 
-tpp_client.post("v1/maintenance/transaction/#{transaction_id}", {operation: "cancel"})0
+tpp_client.post("v1/maintenance/transaction/#{transaction_id}", {operation: "cancel"})
 
 tpp_client.get("v1/transaction", orderid: "TEST-ORDER-001")
 tpp_client.get("v1/transaction/#{transaction_id}", {})

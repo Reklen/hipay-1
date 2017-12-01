@@ -70,12 +70,22 @@ class TPP < Test::Unit::TestCase
     end
   end
 
+  def test_get_v1_transaction_with_ref_success
+    VCR.use_cassette("get_v1_transaction_with_ref_success") do
+      transaction_ref = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})['transaction']['transaction_reference']
+      response = @hipay.get("v1/transaction/#{transaction_ref}", {})
+
+      assert_not_nil response
+      assert_equal response['transaction']['transaction_reference'], transaction_ref
+      assert_equal response['transaction']['order']['id'], "TEST-ORDER-001"
+    end
+  end
 
   def post_v1_maintenance_success
     VCR.use_cassette("post_v1_maintenance_success") do
-      transaction_id = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})['transaction']['transaction_reference']
+      transaction_ref = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})['transaction']['transaction_reference']
 
-      response = @hipay.post("v1/maintenance/transaction/#{transaction_id}", {operation: "cancel"})
+      response = @hipay.post("v1/maintenance/transaction/#{transaction_ref}", {operation: "cancel"})
 
       # PENDING TEST - RESPONSE
       # {"code"=>"1020001", "message"=>"No route to acquirer", "description"=>nil}
@@ -86,4 +96,14 @@ class TPP < Test::Unit::TestCase
     end
   end
 
+  def get_v2_available_payment_products
+    VCR.use_cassette("get_v2_available_payment_products_success") do
+      response = @hipay.get("v2/available-payment-products", {})
+
+      # PENDING TEST - RESPONSE
+      # Incorrect Credentials
+
+      assert_not_nil response
+    end
+  end
 end

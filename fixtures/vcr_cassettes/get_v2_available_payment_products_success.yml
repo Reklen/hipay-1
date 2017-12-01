@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage-secure-gateway.hipay-tpp.com/rest//v2/available-payment-products
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 01 Dec 2017 16:22:00 GMT
+      Server:
+      - Apache
+      Vary:
+      - Authorization,Accept-Encoding
+      Cache-Control:
+      - no-cache
+      Allow:
+      - GET
+      Content-Length:
+      - '221'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <result>
+          <entry>
+            <id><![CDATA[DTJACZZY]]></id>
+            <code><![CDATA[tpe]]></code>
+            <description><![CDATA[TPE]]></description>
+            <customer_description><![CDATA[]]></customer_description>
+            <payment_product_category_code><![CDATA[credit-card]]></payment_product_category_code>
+            <tokenizable>true</tokenizable>
+          </entry>
+        </result>
+    http_version: 
+  recorded_at: Fri, 01 Dec 2017 16:22:01 GMT
+recorded_with: VCR 3.0.3
