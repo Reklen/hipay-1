@@ -7,7 +7,7 @@ module Hipay
 
       def initialize opts = {}
         @options = opts.with_indifferent_access
-        @uri = URI.parse @options.delete :url
+        @uri = set_uri
         @http = Net::HTTP.new(@uri.host, @uri.port)
         @http.use_ssl = true if @uri.port == 443
       end
@@ -48,11 +48,16 @@ module Hipay
       end
 
       def handle_response response
-        response.read_body
+        Hash.from_xml(response.read_body)["response"]
       end
 
+      private
+        def set_uri
+          @options[:env_test] ||= false
+          uri_to_parse = @options[:env_test] == true ? Hipay::TPP_PROD_URL : Hipay::TPP_TEST_URL
+          URI.parse(uri_to_parse)
+        end
 
     end
-
   end
 end

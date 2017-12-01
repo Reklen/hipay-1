@@ -1,8 +1,8 @@
 Gem::Specification.new do |spec|
   spec.name          = 'hipay'
   spec.version       = File.read('VERSION.semver').chomp
-  spec.authors       = ['itkin']
-  spec.email         = ['nicolas.papon@gmail.com']
+  spec.authors       = ['itkin', 'Arpsara']
+  spec.email         = ['nicolas.papon@gmail.com', 'contact@ct2c.fr']
 
   spec.summary       = 'Hipay client.'
   spec.description   = 'Hipay client.'
@@ -20,7 +20,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler',    '~> 1.10'
   spec.add_development_dependency 'rake',       '~> 10.4'
   spec.add_development_dependency 'yard',       '~> 0.8'
-  spec.add_development_dependency 'simplecov',  '~> 0.10'
+  spec.add_development_dependency 'simplecov',  '~> 0.15.1'
   spec.add_development_dependency 'rubocop',    '~> 0.32'
   spec.add_development_dependency 'pry',        '~> 0.10.1'
+
+  spec.add_development_dependency('webmock')
+  spec.add_development_dependency('vcr')
 end

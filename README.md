@@ -75,9 +75,8 @@ client.user_account.call :is_available, email: ''
 Checkout out https://developer.hipay.com/doc-api/enterprise/gateway/#/
 
 ```ruby
-tpp_client = Hipay::Client::TPP.new url: "https://stage-secure-gateway.hipay-tpp.com/rest/",
-                                    username: "my_login",
-                                    password: "my_password"
+tpp_client = Hipay::Client::TPP.new username: "my_login", password: "my_password"
+By default, env_test is set to false, set it to true for production mode!
 
 tpp_client.post('v1/hpayment', {orderid: "TEST-HPAYMENT-001", operation: "Authorization", description: "Desc test", amount: "70", accept_url: "http://test.com", decline_url: "http://test.com", pending_url: "http//test.com", exception_url: "http://test.com", cancel_url: "http://test.com", firstname: "Jane", lastname: "Doe", currency: "EUR"})
 
