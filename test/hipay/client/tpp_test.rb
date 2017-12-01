@@ -60,6 +60,30 @@ class TPP < Test::Unit::TestCase
     end
   end
 
+  def test_get_v1_transaction_success
+    VCR.use_cassette("get_v1_transaction_success") do
+      response = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})
 
+      assert_not_nil response
+      assert_not_nil response['transaction']['transaction_reference']
+      assert_equal response['transaction']['order']['id'], "TEST-ORDER-001"
+    end
+  end
+
+
+  def post_v1_maintenance_success
+    VCR.use_cassette("post_v1_maintenance_success") do
+      transaction_id = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})['transaction']['transaction_reference']
+
+      response = @hipay.post("v1/maintenance/transaction/#{transaction_id}", {operation: "cancel"})
+
+      # PENDING TEST - RESPONSE
+      # {"code"=>"1020001", "message"=>"No route to acquirer", "description"=>nil}
+
+      assert_not_nil response
+      pending assert_equal response['order']['id'], "TEST-ORDER-001"
+      pending assert_equal response['order']['amount'], "72.13"
+    end
+  end
 
 end
