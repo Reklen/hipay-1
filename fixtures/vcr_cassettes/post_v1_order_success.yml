@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stage-secure-gateway.hipay-tpp.com/rest//v1/order
+    body:
+      encoding: US-ASCII
+      string: orderid=TEST-ORDER-001&operation=Authorization&payment_product=cb&description=Desc+test&amount=72.13&accept_url=http%3A%2F%2Ftest.com&decline_url=http%3A%2F%2Ftest.com&pending_url=http%2F%2Ftest.com&exception_url=http%3A%2F%2Ftest.com&cancel_url=http%3A%2F%2Ftest.com&firstname=Jane&lastname=Doe&currency=EUR
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Fri, 01 Dec 2017 15:07:51 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Content-Length:
+      - '144'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; encoding=UTF-8;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <code>1020001</code>
+          <message>No route to acquirer</message>
+          <description/>
+        </response>
+    http_version: 
+  recorded_at: Fri, 01 Dec 2017 15:07:52 GMT
+recorded_with: VCR 3.0.3
