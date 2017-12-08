@@ -11,7 +11,7 @@ class TPP < Test::Unit::TestCase
   end
 
   def test_post_v1_hpayment_success
-    VCR.use_cassette("post_v1_hpayment_success") do
+    VCR.use_cassette("post_v1_hpayment_success", :record => :new_episodes) do
       response = @hipay.post('v1/hpayment', {
         orderid: "TEST-HPAYMENT-001",
         operation: "Authorization",
@@ -33,12 +33,12 @@ class TPP < Test::Unit::TestCase
     end
   end
 
-  def post_v1_order_success
-    VCR.use_cassette("post_v1_order_success") do
+  def test_post_v1_order_success
+    VCR.use_cassette("post_v1_order_success", :record => :new_episodes) do
       response = @hipay.post('v1/order', {
-        orderid: "TEST-ORDER-001",
+        orderid: "TEST-UNIT-ORDER-001",
         operation: "Authorization",
-        payment_product: "cb",
+        payment_product: "tpe",
         description: "Desc test",
         amount: "72.13",
         accept_url: "http://test.com",
@@ -48,41 +48,46 @@ class TPP < Test::Unit::TestCase
         cancel_url: "http://test.com",
         firstname: "Jane",
         lastname: "Doe",
-        currency: "EUR"
+        currency: "EUR",
+        eci: "10",
+        authentication_indicator: "0",
+        initialize_payment_terminal: "1",
+        payment_terminal_id: "12",
+        store_id: "2",
+        order_point: "store", # or can be "store" or "web"
+        pos_transaction_lifetime: "60"
       })
 
-      # PENDING TEST - RESPONSE
-      # {"code"=>"1020001", "message"=>"No route to acquirer", "description"=>nil}
-
       assert_not_nil response
-      pending assert_equal response['order']['id'], "TEST-ORDER-001"
-      pending assert_equal response['order']['amount'], "72.13"
+      assert_equal response['state'], "pending"
+      assert_equal response['order']['id'], "TEST-UNIT-ORDER-001"
+      assert_equal response['order']['amount'], "72.13"
     end
   end
 
   def test_get_v1_transaction_success
-    VCR.use_cassette("get_v1_transaction_success") do
-      response = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})
+    VCR.use_cassette("get_v1_transaction_success", :record => :new_episodes) do
+      response = @hipay.get("v1/transaction", {orderid: "TEST-UNIT-ORDER-001"})
 
       assert_not_nil response
       assert_not_nil response['transaction']['transaction_reference']
-      assert_equal response['transaction']['order']['id'], "TEST-ORDER-001"
+      assert_equal response['transaction']['order']['id'], "TEST-UNIT-ORDER-001"
     end
   end
 
   def test_get_v1_transaction_with_ref_success
-    VCR.use_cassette("get_v1_transaction_with_ref_success") do
-      transaction_ref = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})['transaction']['transaction_reference']
+    VCR.use_cassette("get_v1_transaction_with_ref_success", :record => :new_episodes) do
+      transaction_ref = @hipay.get("v1/transaction", {orderid: "TEST-UNIT-ORDER-001"})['transaction']['transaction_reference']
       response = @hipay.get("v1/transaction/#{transaction_ref}", {})
 
       assert_not_nil response
       assert_equal response['transaction']['transaction_reference'], transaction_ref
-      assert_equal response['transaction']['order']['id'], "TEST-ORDER-001"
+      assert_equal response['transaction']['order']['id'], "TEST-UNIT-ORDER-001"
     end
   end
 
   def post_v1_maintenance_success
-    VCR.use_cassette("post_v1_maintenance_success") do
+    VCR.use_cassette("post_v1_maintenance_success", :record => :new_episodes) do
       transaction_ref = @hipay.get("v1/transaction", {orderid: "TEST-ORDER-001"})['transaction']['transaction_reference']
 
       response = @hipay.post("v1/maintenance/transaction/#{transaction_ref}", {operation: "cancel"})
@@ -97,7 +102,7 @@ class TPP < Test::Unit::TestCase
   end
 
   def get_v2_available_payment_products
-    VCR.use_cassette("get_v2_available_payment_products_success") do
+    VCR.use_cassette("get_v2_available_payment_products_success", :record => :new_episodes) do
       response = @hipay.get("v2/available-payment-products", {})
 
       # PENDING TEST - RESPONSE

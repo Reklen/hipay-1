@@ -1,0 +1,178 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://secure2-vault.hipay-tpp.com/rest/v2/token/create
+    body:
+      encoding: US-ASCII
+      string: card_number=4000000000000002&card_expiry_month=12&card_expiry_year=2025&card_holder=Jane+Doe&cvc=123
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 07 Dec 2017 14:49:28 GMT
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Content-Length:
+      - '194'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=120
+      Vary:
+      - Authorization,Accept-Encoding
+      Www-Authenticate:
+      - Basic realm="Secured Token Api v2"
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <code>1000001</code>
+          <message><![CDATA[Incorrect Credentials _ Username and/or password is incorrect]]></message>
+          <description><![CDATA[{"code":1000001,"message":"Incorrect Credentials _ Username and/or password is incorrect"}]]></description>
+        </response>
+    http_version: 
+  recorded_at: Thu, 07 Dec 2017 14:49:28 GMT
+- request:
+    method: post
+    uri: https://stage-secure2-vault.hipay-tpp.com/rest/v2/token/create
+    body:
+      encoding: US-ASCII
+      string: card_number=4000000000000002&card_expiry_month=12&card_expiry_year=2025&card_holder=Jane+Doe&cvc=123
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 07 Dec 2017 16:54:59 GMT
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=30
+      Vary:
+      - Authorization,Accept-Encoding
+      Cache-Control:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Set-Cookie:
+      - PHPSESSID=nc3qsojkflimuf1seoldf30hl2; path=/
+      Strict-Transport-Security:
+      - max-age=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <token><![CDATA[ce5f096fa6bc05989c170e7c96f94432660491bd]]></token>
+          <request_id><![CDATA[0]]></request_id>
+          <brand><![CDATA[VISA]]></brand>
+          <pan><![CDATA[400000xxxxxx0002]]></pan>
+          <card_holder><![CDATA[Jane Doe]]></card_holder>
+          <card_expiry_month><![CDATA[12]]></card_expiry_month>
+          <card_expiry_year><![CDATA[2025]]></card_expiry_year>
+          <country><![CDATA[US]]></country>
+          <card_type><![CDATA[CREDIT]]></card_type>
+        </response>
+    http_version: 
+  recorded_at: Thu, 07 Dec 2017 16:54:59 GMT
+- request:
+    method: get
+    uri: https://stage-secure2-vault.hipay-tpp.com/rest/v2/token/ce5f096fa6bc05989c170e7c96f94432660491bd?request_id=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 08 Dec 2017 09:14:15 GMT
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Content-Length:
+      - '268'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=30
+      Vary:
+      - Authorization,Accept-Encoding
+      Cache-Control:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Set-Cookie:
+      - PHPSESSID=tlddlrtdoh3jv20nbr1i1mo7k1; path=/
+      Strict-Transport-Security:
+      - max-age=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <token><![CDATA[ce5f096fa6bc05989c170e7c96f94432660491bd]]></token>
+          <request_id><![CDATA[0]]></request_id>
+          <brand><![CDATA[VISA]]></brand>
+          <pan><![CDATA[400000xxxxxx0002]]></pan>
+          <card_holder><![CDATA[ert]]></card_holder>
+          <card_expiry_month><![CDATA[10]]></card_expiry_month>
+          <card_expiry_year><![CDATA[2018]]></card_expiry_year>
+          <country><![CDATA[US]]></country>
+          <card_type><![CDATA[CREDIT]]></card_type>
+        </response>
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 09:14:15 GMT
+recorded_with: VCR 4.0.0

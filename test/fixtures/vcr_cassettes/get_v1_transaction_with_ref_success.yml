@@ -1,0 +1,2481 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stage-secure-gateway.hipay-tpp.com/rest//v1/transaction?orderid=TEST-ORDER-001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 01 Dec 2017 16:20:03 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '930'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; encoding=UTF-8;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <transaction>
+            <state>pending</state>
+            <reason/>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>1</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134398585923</transaction_reference>
+            <date_created>2017-12-01 16:07:51+01</date_created>
+            <date_updated>2017-12-01 16:07:52+01</date_updated>
+            <date_authorized/>
+            <status/>
+            <message>Acquirer not Found</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>cb</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[1]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+        </response>
+    http_version: 
+  recorded_at: Fri, 01 Dec 2017 16:20:04 GMT
+- request:
+    method: get
+    uri: https://stage-secure-gateway.hipay-tpp.com/rest//v1/transaction/134398585923
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 01 Dec 2017 16:20:04 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '930'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; encoding=UTF-8;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <transaction>
+            <state>pending</state>
+            <reason/>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>1</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134398585923</transaction_reference>
+            <date_created>2017-12-01 16:07:51+01</date_created>
+            <date_updated>2017-12-01 16:07:52+01</date_updated>
+            <date_authorized/>
+            <status/>
+            <message>Acquirer not Found</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>cb</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[1]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+        </response>
+    http_version: 
+  recorded_at: Fri, 01 Dec 2017 16:20:04 GMT
+- request:
+    method: get
+    uri: https://secure-gateway.hipay-tpp.com/rest/v1/transaction?orderid=TEST-ORDER-001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Dec 2017 16:38:37 GMT
+      Server:
+      - Apache/2.4.10 (Debian)
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1430'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; encoding=UTF-8;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <transaction>
+            <state>pending</state>
+            <reason/>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>1</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134398585923</transaction_reference>
+            <date_created>2017-12-01 16:07:51+01</date_created>
+            <date_updated>2017-12-01 16:07:52+01</date_updated>
+            <date_authorized/>
+            <status/>
+            <message>Acquirer not Found</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>cb</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>pending</state>
+            <reason/>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>2</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399114127</transaction_reference>
+            <date_created>2017-12-05 19:21:55+01</date_created>
+            <date_updated>2017-12-05 19:21:56+01</date_updated>
+            <date_authorized/>
+            <status/>
+            <message>Acquirer not Found</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>cb</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>3</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221215</transaction_reference>
+            <date_created>2017-12-06 15:38:32+01</date_created>
+            <date_updated>2017-12-06 15:38:33+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>4</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221296</transaction_reference>
+            <date_created>2017-12-06 15:39:06+01</date_created>
+            <date_updated>2017-12-06 15:39:07+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>5</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221949</transaction_reference>
+            <date_created>2017-12-06 15:44:06+01</date_created>
+            <date_updated>2017-12-06 15:44:07+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>1</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>6</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221957</transaction_reference>
+            <date_created>2017-12-06 15:44:11+01</date_created>
+            <date_updated>2017-12-06 15:44:12+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>1</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>7</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399222707</transaction_reference>
+            <date_created>2017-12-06 15:50:03+01</date_created>
+            <date_updated>2017-12-06 15:50:04+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>1</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>8</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399222742</transaction_reference>
+            <date_created>2017-12-06 15:50:19+01</date_created>
+            <date_updated>2017-12-06 15:50:20+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>9</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399222875</transaction_reference>
+            <date_created>2017-12-06 15:51:16+01</date_created>
+            <date_updated>2017-12-06 15:51:16+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>10</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399243832</transaction_reference>
+            <date_created>2017-12-06 18:18:47+01</date_created>
+            <date_updated>2017-12-06 18:18:48+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+        </response>
+    http_version: 
+  recorded_at: Thu, 07 Dec 2017 16:38:38 GMT
+- request:
+    method: get
+    uri: https://stage-secure-gateway.hipay-tpp.com/rest/v1/transaction?orderid=TEST-ORDER-001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Dec 2017 16:53:32 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1430'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; encoding=UTF-8;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <transaction>
+            <state>pending</state>
+            <reason/>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>1</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134398585923</transaction_reference>
+            <date_created>2017-12-01 16:07:51+01</date_created>
+            <date_updated>2017-12-01 16:07:52+01</date_updated>
+            <date_authorized/>
+            <status/>
+            <message>Acquirer not Found</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>cb</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>pending</state>
+            <reason/>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>2</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399114127</transaction_reference>
+            <date_created>2017-12-05 19:21:55+01</date_created>
+            <date_updated>2017-12-05 19:21:56+01</date_updated>
+            <date_authorized/>
+            <status/>
+            <message>Acquirer not Found</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>cb</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>3</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221215</transaction_reference>
+            <date_created>2017-12-06 15:38:32+01</date_created>
+            <date_updated>2017-12-06 15:38:33+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>4</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221296</transaction_reference>
+            <date_created>2017-12-06 15:39:06+01</date_created>
+            <date_updated>2017-12-06 15:39:07+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>5</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221949</transaction_reference>
+            <date_created>2017-12-06 15:44:06+01</date_created>
+            <date_updated>2017-12-06 15:44:07+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>1</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>6</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399221957</transaction_reference>
+            <date_created>2017-12-06 15:44:11+01</date_created>
+            <date_updated>2017-12-06 15:44:12+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>1</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>7</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399222707</transaction_reference>
+            <date_created>2017-12-06 15:50:03+01</date_created>
+            <date_updated>2017-12-06 15:50:04+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>1</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>8</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399222742</transaction_reference>
+            <date_created>2017-12-06 15:50:19+01</date_created>
+            <date_updated>2017-12-06 15:50:20+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>9</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399222875</transaction_reference>
+            <date_created>2017-12-06 15:51:16+01</date_created>
+            <date_updated>2017-12-06 15:51:16+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>1010201</code>
+              <message>Invalid Parameter</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>10</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399243832</transaction_reference>
+            <date_created>2017-12-06 18:18:47+01</date_created>
+            <date_updated>2017-12-06 18:18:48+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>7</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>ACCEPTED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-01T15:07:51+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[10]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+        </response>
+    http_version: 
+  recorded_at: Thu, 07 Dec 2017 16:53:33 GMT
+- request:
+    method: get
+    uri: https://stage-secure-gateway.hipay-tpp.com/rest/v1/transaction?orderid=TEST-UNIT-ORDER-001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 09:02:37 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '957'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; encoding=UTF-8;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>4000001</code>
+              <message>Declined</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>1</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399463131</transaction_reference>
+            <date_created>2017-12-08 09:55:55+01</date_created>
+            <date_updated>2017-12-08 09:57:18+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>10</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-UNIT-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-08T08:55:55+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[1]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+        </response>
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 09:02:37 GMT
+- request:
+    method: get
+    uri: https://stage-secure-gateway.hipay-tpp.com/rest/v1/transaction/134399463131
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic OTQ2Njc5NzUuc3RhZ2Utc2VjdXJlLWdhdGV3YXkuaGlwYXktdHBwLmNvbTpUZXN0X0R2NWFQcWpINlZhMHI2bTNSQUFsNWIyVw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2017 09:02:37 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '957'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml; encoding=UTF-8;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <transaction>
+            <state>declined</state>
+            <reason>
+              <code>4000001</code>
+              <message>Declined</message>
+            </reason>
+            <forward_url/>
+            <test>true</test>
+            <mid>00001334813</mid>
+            <attempt_id>1</attempt_id>
+            <authorization_code/>
+            <transaction_reference>134399463131</transaction_reference>
+            <date_created>2017-12-08 09:55:55+01</date_created>
+            <date_updated>2017-12-08 09:57:18+01</date_updated>
+            <date_authorized/>
+            <status>113</status>
+            <message>Authorization Refused</message>
+            <authorized_amount>0.00</authorized_amount>
+            <captured_amount>0.00</captured_amount>
+            <refunded_amount>0.00</refunded_amount>
+            <decimals>2</decimals>
+            <currency>EUR</currency>
+            <ip_address>0.0.0.0</ip_address>
+            <ip_country/>
+            <device_id/>
+            <cdata1><![CDATA[]]></cdata1>
+            <cdata2><![CDATA[]]></cdata2>
+            <cdata3><![CDATA[]]></cdata3>
+            <cdata4><![CDATA[]]></cdata4>
+            <cdata5><![CDATA[]]></cdata5>
+            <cdata6><![CDATA[]]></cdata6>
+            <cdata7><![CDATA[]]></cdata7>
+            <cdata8><![CDATA[]]></cdata8>
+            <cdata9><![CDATA[]]></cdata9>
+            <cdata10><![CDATA[]]></cdata10>
+            <avs_result/>
+            <cvc_result/>
+            <eci>10</eci>
+            <payment_product>tpe</payment_product>
+            <payment_method>
+              <token/>
+              <brand/>
+              <pan/>
+              <card_holder><![CDATA[]]></card_holder>
+              <card_expiry_month/>
+              <card_expiry_year/>
+              <issuer><![CDATA[]]></issuer>
+              <country/>
+            </payment_method>
+            <three_d_secure/>
+            <fraud_screening>
+              <scoring>0</scoring>
+              <result>NOT_LAUNCHED</result>
+              <review/>
+            </fraud_screening>
+            <order>
+              <id><![CDATA[TEST-UNIT-ORDER-001]]></id>
+              <date_created><![CDATA[2017-12-08T08:55:55+0000]]></date_created>
+              <gender><![CDATA[U]]></gender>
+              <firstname><![CDATA[Jane]]></firstname>
+              <lastname><![CDATA[Doe]]></lastname>
+              <street_address><![CDATA[]]></street_address>
+              <locality><![CDATA[]]></locality>
+              <postal_code><![CDATA[]]></postal_code>
+              <country><![CDATA[]]></country>
+              <attempts><![CDATA[1]]></attempts>
+              <amount><![CDATA[72.13]]></amount>
+              <shipping><![CDATA[0.00]]></shipping>
+              <tax><![CDATA[0.00]]></tax>
+              <decimals><![CDATA[2]]></decimals>
+              <currency><![CDATA[EUR]]></currency>
+              <customer_id><![CDATA[]]></customer_id>
+              <language><![CDATA[en_US]]></language>
+              <msisdn><![CDATA[]]></msisdn>
+              <phone><![CDATA[]]></phone>
+              <phone_operator><![CDATA[]]></phone_operator>
+              <shipping_address>
+                <firstname/>
+                <lastname/>
+                <street_address/>
+                <locality/>
+                <postal_code/>
+                <country/>
+              </shipping_address>
+              <email><![CDATA[]]></email>
+            </order>
+            <debit_agreement>
+              <id/>
+              <status/>
+            </debit_agreement>
+          </transaction>
+        </response>
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 09:02:38 GMT
+recorded_with: VCR 4.0.0
